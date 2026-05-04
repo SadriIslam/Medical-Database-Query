@@ -60,33 +60,7 @@ This project builds a hospital database using synthetic EHR data from [Synthea](
 
 ---
 
-## Quick Start
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/YOUR_USERNAME/query-latency-prediction.git
-cd query-latency-prediction
-```
-
-### 2. Install Python dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the final ML evaluation
-```bash
-cd ml
-python ml_final.py
-```
-
-This will:
-- Load `../data/benchmark_final_100.csv`
-- Train 5 ML models (Random Forest, Gradient Boosting, Extra Trees, Hist GB, SVR)
-- Compare against the PostgreSQL planner baseline
-- Print the full results table and hypothesis test outcome
-- Save result charts to `../results/`
-
----
 
 ## Dataset
 
@@ -181,7 +155,7 @@ CREATE DATABASE medical_analytics;
 
 ## Key Findings
 
-1. **Extra Trees achieves 40.3% better MAE than PostgreSQL** — three independent model families confirm H₁
+1. **Extra Trees achieves better MAE than PostgreSQL** — three independent model families confirm H₁
 2. **est_cost dominates at 69.8%** — the ML model is a calibration layer on PostgreSQL's estimate, not an independent predictor
 3. **Indexes matter more than join count** — Q4 (4 tables, all indexed) = 0.1 ms vs Q5 (2 tables, no index on filter) = 671 ms
 4. **Boosting methods need more data** — Gradient Boosting and XGBoost require 240+ training examples to outperform ensembles
