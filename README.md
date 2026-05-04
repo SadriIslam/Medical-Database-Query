@@ -1,7 +1,5 @@
 # Predicting PostgreSQL Query Execution Latency
-## for Medical Analytics Applications Using Supervised Machine Learning
 
-**CS 8260 — Advanced Database Systems | Kennesaw State University | Spring 2026**
 
 > Can a supervised Machine Learning model predict how long a PostgreSQL query will take — more accurately than PostgreSQL's own built-in cost estimator?
 
@@ -198,18 +196,3 @@ CREATE DATABASE medical_analytics;
 
 ---
 
-## Citation
-
-If you use this work, please cite:
-
-```
-S. Islam, K. S. Sharif, and T. T. Khan, "Predicting PostgreSQL Query Execution Latency
-for Medical Analytics Applications Using Supervised Machine Learning,"
-CS 8260, Kennesaw State University, Spring 2026.
-```
-
----
-
-## License
-
-Academic use only — CS 8260, Kennesaw State University, Spring 2026.
